@@ -18,8 +18,8 @@
     "polymer": "Polymer/polymer#^1.4.0",
     "iron-collapse": "PolymerElements/iron-collapse#^1.2.1",
     "shared-styles": "git://github.com/calipho-sib-webcomponents/shared-styles.git#develop",
-    "bootstrap": "^3.3.7",
-    "nextprot-js": "nextprot#^X.X.X"
+    "nextprot-js": "nextprot#^X.X.X",
+    "paper-spinner": "^1.2.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

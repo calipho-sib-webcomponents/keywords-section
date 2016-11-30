@@ -54,6 +54,10 @@ Keywords section present on function, medical, sequence, and structures pages.
     Polymer({
       is: 'keywords-section',
       properties: {
+        nxConfig: {
+          type: Object,
+          value: {}
+        },
         categories: {
           type: Array
         },
@@ -66,11 +70,10 @@ Keywords section present on function, medical, sequence, and structures pages.
           notify: true
         }
       },
-      created: function(){
+      attached: function(){
         var nx = new Nextprot.Client("neXtprot overview loader", "Calipho Group");
-        this.nxEntryName = nx.getEntryName();
         var self=this;
-        nx.getAnnotationsByCategory(this.nxEntryName, "keyword")
+        nx.getAnnotationsByCategory(this.nxConfig.entry, "keyword")
           .then(function (data) {
             var keywordList = self.getKeywordsByView(data.annot);
             self.$.spinner.active = false;
